@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Amritlal Labana | Software Engineer</title>
+    
+    <!-- External Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-emerald-500 selection:text-white bg-grid">
+
+    <!-- Noise Overlay for texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-slate-800 nav-animate transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 text-xl font-bold text-white tracking-tight group">
+                <img src="arun.jpeg" alt="Arun Labana" class="w-9 h-9 rounded-full object-cover border-2 border-emerald-500/50 profile-img">
+                <span class="group-hover:text-emerald-400 transition-colors">Arun Amritlal Labana</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">About</a>
+                <a href="#experience" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Experience</a>
+                <a href="#skills" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Skills</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white mobile-menu-btn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden px-6 pb-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-emerald-400 transition">About</a>
+            <a href="#experience" class="block text-slate-300 hover:text-emerald-400 transition">Experience</a>
+            <a href="#skills" class="block text-slate-300 hover:text-emerald-400 transition">Skills</a>
+            <a href="#contact" class="block text-slate-300 hover:text-emerald-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <!-- Animated Background Orbs -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-10 floating-orb parallax" data-speed="30"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-10 floating-orb-slow parallax" data-speed="20"></div>
+        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-5 floating-orb-delayed parallax" data-speed="15"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <!-- Badge -->
+            <div class="hero-badge inline-block px-4 py-2 mb-6 text-xs font-mono text-emerald-400 bg-emerald-400/10 rounded-full border border-emerald-400/20 backdrop-blur-sm">
+                <span class="inline-block w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+                Open to Opportunities
+            </div>
+            
+            <!-- Main Title with Typing Effect -->
+            <h1 class="hero-title text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+                Hi, I'm <span class="gradient-text">Arun</span>
+            </h1>
+            
+            <!-- Subtitle -->
+            <h2 class="hero-subtitle text-2xl md:text-3xl font-semibold text-slate-400 mb-6">
+                Building <span class="text-white typing-effect" data-text="Scalable Distributed Systems" data-speed="80"></span>
+            </h2>
+            
+            <!-- Description -->
+            <p class="hero-description text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Software Engineer at <strong class="text-white">Intuit</strong> powering billing for <strong class="text-white">10M+ QuickBooks</strong> customers. NITK Surathkal Graduate. Expert in Java, Spring Boot, and Event-Driven Architecture.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="hero-buttons flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="magnetic-btn btn-glow px-8 py-3 bg-emerald-500 text-slate-950 font-bold rounded-lg transition-all duration-300">
+                    <i class="fas fa-paper-plane mr-2"></i>Get in Touch
+                </a>
+                <a href="#experience" class="magnetic-btn px-8 py-3 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-emerald-500/50">
+                    <i class="fas fa-briefcase mr-2"></i>View Experience
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="hero-stats grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 border-t border-slate-800 pt-8">
+                <div class="group cursor-pointer">
+                    <div class="stat-counter text-2xl font-bold text-white font-mono counter-number" data-target="2063">0</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider group-hover:text-emerald-400 transition">CodeChef Rating</div>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="stat-counter text-2xl font-bold text-white font-mono counter-number" data-target="1811">0</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider group-hover:text-emerald-400 transition">Codeforces Max</div>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="stat-counter text-2xl font-bold text-white font-mono counter-number" data-target="8.82">0</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider group-hover:text-emerald-400 transition">CGPA @ NITK</div>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="stat-counter text-2xl font-bold text-white font-mono counter-number" data-target="1624" data-prefix="AIR ">0</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider group-hover:text-emerald-400 transition">JEE Main Rank</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#experience" class="text-slate-500 hover:text-emerald-400 transition">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-slate-900/50 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="section-title animate-slide-left text-3xl font-bold text-white mb-12">
+                Experience
+            </h2>
+
+            <div class="space-y-8">
+                
+                <!-- Current Role -->
+                <div class="animate-slide-right glass-card card-hover rounded-xl p-6 group">
+                    <div class="flex flex-wrap items-center gap-3 mb-3">
+                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-mono rounded-full border border-emerald-500/30 whitespace-nowrap">
+                            <i class="fas fa-circle text-[6px] mr-2 animate-pulse"></i>Aug 2024 → Present
+                        </span>
+                        <span class="h-1 w-1 bg-slate-600 rounded-full hidden sm:block"></span>
+                        <span class="text-slate-500 text-xs">Full-time</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition mb-1">
+                        Software Engineer — Online Billing Platform
+                    </h3>
+                    <div class="text-emerald-500 font-medium mb-2 flex items-center gap-2">
+                        <i class="fas fa-building"></i>Intuit • Bengaluru, India
+                    </div>
+                    <p class="text-slate-500 text-xs mb-4 italic">MSE OBill · 100+ Engineers · QuickBooks Online, Payroll & TSheets</p>
+                    <ul class="list-disc ml-5 space-y-3 text-slate-400 text-base leading-relaxed marker:text-emerald-500">
+                        <li>Building mission-critical billing infrastructure processing <strong class="text-white">50,000+ daily subscription signups</strong> for <strong class="text-white">10M+ QuickBooks</strong> customers while maintaining <strong class="text-white">99.9% uptime SLA</strong>.</li>
+                        <li>Architecting <strong class="text-white">event-driven microservices</strong> using Java Spring Boot, GraphQL APIs, PostgreSQL/MySQL, and ActiveMQ—delivering <strong class="text-white">200ms response times</strong>.</li>
+                        <li>Owning subscription lifecycle features including direct signups, <strong class="text-white">accountant-client workflows</strong> (BillMe/BillMy models), trial-to-paid conversions.</li>
+                        <li>Deployed services on <strong class="text-white">Kubernetes</strong> with circuit breakers and observability, reducing MTTR by <strong class="text-white">83%</strong>.</li>
+                    </ul>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50">
+                        <span class="text-emerald-400 text-sm"><i class="fas fa-trophy mr-2"></i>Employee of the Month (Dec 2024, Mar 2025) & Employee of the Quarter</span>
+                    </div>
+                </div>
+
+                <!-- Intuit Intern -->
+                <div class="animate-slide-left glass-card card-hover rounded-xl p-6 group">
+                    <div class="flex flex-wrap items-center gap-3 mb-3">
+                        <span class="px-3 py-1 bg-slate-700/50 text-slate-400 text-xs font-mono rounded-full border border-slate-600 whitespace-nowrap">
+                            May 2023 → Jul 2023
+                        </span>
+                        <span class="h-1 w-1 bg-slate-600 rounded-full hidden sm:block"></span>
+                        <span class="text-slate-500 text-xs">Internship</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition mb-1">Software Engineer Intern</h3>
+                    <div class="text-emerald-500 font-medium mb-4 flex items-center gap-2">
+                        <i class="fas fa-building"></i>Intuit • Bengaluru
+                    </div>
+                    <ul class="list-disc ml-5 space-y-3 text-slate-400 text-base leading-relaxed marker:text-emerald-500">
+                        <li>Built a Java-based backend service integrating <strong class="text-white">Instabug APM</strong> for automated data ingestion.</li>
+                        <li>Designed RESTful APIs for real-time metrics, reducing incident resolution time by <strong class="text-white">25%</strong>.</li>
+                        <li>Received <strong class="text-emerald-400">Pre-Placement Offer (PPO)</strong> for delivering production-ready service.</li>
+                    </ul>
+                </div>
+
+                <!-- Divisha Intern -->
+                <div class="animate-slide-right glass-card card-hover rounded-xl p-6 group">
+                    <div class="flex flex-wrap items-center gap-3 mb-3">
+                        <span class="px-3 py-1 bg-slate-700/50 text-slate-400 text-xs font-mono rounded-full border border-slate-600 whitespace-nowrap">
+                            Nov 2023 → Mar 2024
+                        </span>
+                        <span class="h-1 w-1 bg-slate-600 rounded-full hidden sm:block"></span>
+                        <span class="text-slate-500 text-xs">Internship</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition mb-1">Software Engineer Intern</h3>
+                    <div class="text-emerald-500 font-medium mb-4 flex items-center gap-2">
+                        <i class="fas fa-building"></i>Divisha Innovations • Remote
+                    </div>
+                    <ul class="list-disc ml-5 space-y-3 text-slate-400 text-base leading-relaxed marker:text-emerald-500">
+                        <li>Developed a centralized dashboard using <strong class="text-white">React.js, Redux, and Tailwind CSS</strong>.</li>
+                        <li>Designed a responsive layout that resulted in a <strong class="text-white">30% decrease</strong> in task completion time.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            
+            <div>
+                <h2 class="section-title animate-blur text-3xl font-bold text-white mb-8">
+                    Technical Arsenal
+                </h2>
+                
+                <div class="space-y-6">
+                    <div class="animate-on-scroll" style="transition-delay: 0.1s;">
+                        <h4 class="text-white font-bold mb-3 flex items-center"><i class="fas fa-code mr-2 text-emerald-500"></i> Languages</h4>
+                        <div class="stagger-children flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Java</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Kotlin</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">C</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">C++</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Python</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">SQL</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 0.15s;">
+                        <h4 class="text-white font-bold mb-3 flex items-center"><i class="fas fa-server mr-2 text-emerald-500"></i> Backend & Frameworks</h4>
+                        <div class="stagger-children flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Spring Boot</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Microservices</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">REST APIs</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">GraphQL</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Hibernate/JPA</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Maven</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Gradle</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 0.2s;">
+                        <h4 class="text-white font-bold mb-3 flex items-center"><i class="fas fa-database mr-2 text-emerald-500"></i> Databases & Messaging</h4>
+                        <div class="stagger-children flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">PostgreSQL</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">MySQL</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">MongoDB</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Redis</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Kafka</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">ActiveMQ</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">RabbitMQ</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 0.25s;">
+                        <h4 class="text-white font-bold mb-3 flex items-center"><i class="fas fa-cloud mr-2 text-emerald-500"></i> Cloud & DevOps</h4>
+                        <div class="stagger-children flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">AWS</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Kubernetes</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Docker</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Jenkins</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">CI/CD</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Terraform</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 0.3s;">
+                        <h4 class="text-white font-bold mb-3 flex items-center"><i class="fas fa-chart-line mr-2 text-emerald-500"></i> Observability & Testing</h4>
+                        <div class="stagger-children flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Splunk</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Grafana</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Prometheus</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">JUnit</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Mockito</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">SonarQube</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-on-scroll" style="transition-delay: 0.35s;">
+                        <h4 class="text-white font-bold mb-3 flex items-center"><i class="fas fa-sitemap mr-2 text-emerald-500"></i> Architecture & Patterns</h4>
+                        <div class="stagger-children flex flex-wrap gap-2">
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Event-Driven</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Circuit Breakers</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">CQRS</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">Design Patterns</span>
+                            <span class="skill-badge px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded border border-slate-700 cursor-pointer">System Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="section-title animate-blur text-3xl font-bold text-white mb-8">
+                    Distinctions
+                </h2>
+                
+                <div class="grid gap-4">
+                    <div class="animate-scale p-6 glass-card card-hover rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">5-Star Coder @ CodeChef</h3>
+                            <i class="fas fa-star text-yellow-400 text-xl"></i>
+                        </div>
+                        <p class="text-slate-400 text-sm">Achieved a highest rating of <strong class="text-white">2063</strong>. Demonstrated elite problem-solving skills under time pressure.</p>
+                    </div>
+
+                    <div class="animate-scale p-6 glass-card card-hover rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">Expert @ Codeforces</h3>
+                            <i class="fas fa-code text-blue-400 text-xl"></i>
+                        </div>
+                        <p class="text-slate-400 text-sm">Highest rating of <strong class="text-white">1811</strong>. Ranked 100 Globally in July Cookoff 2022 Div.2.</p>
+                    </div>
+
+                    <div class="animate-scale p-6 glass-card card-hover rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">JEE Main 2020</h3>
+                            <i class="fas fa-award text-emerald-400 text-xl"></i>
+                        </div>
+                        <p class="text-slate-400 text-sm">Secured <strong class="text-white">AIR 1624</strong> among 1 million+ candidates, showcasing strong analytical foundations.</p>
+                    </div>
+
+                    <div class="animate-scale p-6 glass-card card-hover rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-white">NITK Surathkal</h3>
+                            <i class="fas fa-graduation-cap text-purple-400 text-xl"></i>
+                        </div>
+                        <p class="text-slate-400 text-sm">B.Tech in Information Technology with <strong class="text-white">8.82 CGPA</strong>. Batch of 2024.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="bg-slate-900 border-t border-slate-800 py-20 relative overflow-hidden">
+        <!-- Background Effect -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full filter blur-[200px] opacity-5"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="animate-zoom-bounce text-4xl md:text-5xl font-bold text-white mb-10">Let's Connect</h2>
+            
+            <!-- Email Button -->
+            <div class="animate-scale mb-12">
+                <a href="mailto:labanaarun0@gmail.com" class="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 text-slate-950 font-bold rounded-lg btn-glow text-lg">
+                    <i class="fas fa-envelope"></i>
+                    labanaarun0@gmail.com
+                </a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="animate-flip flex justify-center gap-8 mb-12">
+                <a href="mailto:labanaarun0@gmail.com" class="social-icon text-4xl text-slate-400 hover:text-emerald-400 transition" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arun-labana-524023213/" target="_blank" rel="noopener noreferrer" class="social-icon text-4xl text-slate-400 hover:text-blue-500 transition" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Arun-Labana" target="_blank" rel="noopener noreferrer" class="social-icon text-4xl text-slate-400 hover:text-white transition" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="animate-blur text-slate-600 text-sm">
+                <p>&copy; 2025 Arun Amritlal Labana</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+
