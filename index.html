@@ -50,6 +50,7 @@
             <div class="hidden md:flex space-x-8 text-sm font-medium">
                 <a href="#about" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">About</a>
                 <a href="#experience" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Experience</a>
+                <a href="#projects" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Projects</a>
                 <a href="#skills" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Skills</a>
                 <a href="#contact" class="hover:text-emerald-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-emerald-400 after:transition-all hover:after:w-full">Contact</a>
             </div>
@@ -62,6 +63,7 @@
         <div class="mobile-menu hidden md:hidden px-6 pb-4 space-y-3">
             <a href="#about" class="block text-slate-300 hover:text-emerald-400 transition">About</a>
             <a href="#experience" class="block text-slate-300 hover:text-emerald-400 transition">Experience</a>
+            <a href="#projects" class="block text-slate-300 hover:text-emerald-400 transition">Projects</a>
             <a href="#skills" class="block text-slate-300 hover:text-emerald-400 transition">Skills</a>
             <a href="#contact" class="block text-slate-300 hover:text-emerald-400 transition">Contact</a>
         </div>
@@ -214,8 +216,166 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 relative overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[150px] opacity-10"></div>
+        <div class="absolute bottom-0 left-1/4 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[120px] opacity-10"></div>
+        
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="section-title animate-slide-left text-3xl font-bold text-white mb-4">
+                Featured Projects
+            </h2>
+            <p class="text-slate-400 mb-12 max-w-2xl">Building full-stack applications that solve real problems with modern technologies.</p>
+
+            <!-- LogAI Project Card -->
+            <div class="animate-scale project-card glass-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-500">
+                <!-- Project Header -->
+                <div class="bg-gradient-to-r from-purple-900/50 via-slate-900/50 to-emerald-900/50 p-8 border-b border-slate-700/50">
+                    <div class="flex flex-wrap items-center gap-4 mb-4">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-emerald-500 flex items-center justify-center">
+                            <i class="fas fa-brain text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">LogAI</h3>
+                            <p class="text-slate-400 text-sm">LLM-Powered Java Log Analyzer & Auto-Fix Engine</p>
+                        </div>
+                        <div class="ml-auto flex gap-2">
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-mono rounded-full border border-emerald-500/30">
+                                <i class="fas fa-circle text-[6px] mr-1 animate-pulse"></i>Live
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Badges -->
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-md">Java 17+</span>
+                        <span class="px-2.5 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-md">React 18</span>
+                        <span class="px-2.5 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-md">Python</span>
+                        <span class="px-2.5 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-md">Gemini AI</span>
+                        <span class="px-2.5 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-md">Supabase</span>
+                        <span class="px-2.5 py-1 bg-slate-500/20 text-slate-300 text-xs font-medium rounded-md">TypeScript</span>
+                    </div>
+                </div>
+                
+                <!-- Project Content -->
+                <div class="p-8">
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        An intelligent log analysis platform that automatically captures Java application errors, clusters similar issues, 
+                        explains root causes in plain English, and generates code fixes using AI. Features multi-tenant authentication, 
+                        GitHub integration for source context, and fully deployed infrastructure.
+                    </p>
+                    
+                    <!-- Key Features -->
+                    <div class="grid md:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-lg">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-search text-emerald-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1">Automatic Error Capture</h4>
+                                <p class="text-slate-400 text-xs">SDK intercepts logs via custom Logback appender</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-lg">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-purple-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1">AI-Powered Analysis</h4>
+                                <p class="text-slate-400 text-xs">Gemini LLM explains root causes in plain English</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-lg">
+                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-code text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1">Auto-Generated Fixes</h4>
+                                <p class="text-slate-400 text-xs">Multi-file unified diff patches ready to apply</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-slate-800/50 rounded-lg">
+                            <div class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-github text-orange-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm mb-1">GitHub Integration</h4>
+                                <p class="text-slate-400 text-xs">Fetches real source code for accurate fixes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Architecture Preview -->
+                    <div class="mb-8 p-4 bg-slate-900/80 rounded-xl border border-slate-700/50 font-mono text-xs overflow-x-auto">
+                        <div class="text-slate-500 mb-2">// System Architecture</div>
+                        <div class="text-slate-300 whitespace-pre">
+<span class="text-emerald-400">Java App</span> → <span class="text-orange-400">LogAI SDK</span> → <span class="text-cyan-400">Supabase</span> → <span class="text-purple-400">Python Backend</span> → <span class="text-pink-400">Gemini AI</span>
+    │                                    │
+    └──────────────────────────────────────┴──→ <span class="text-blue-400">React Dashboard</span></div>
+                    </div>
+                    
+                    <!-- Component Links -->
+                    <div class="grid md:grid-cols-4 gap-3 mb-6">
+                        <a href="https://github.com/Arun-Labana/logai-sdk" target="_blank" rel="noopener noreferrer" 
+                           class="flex items-center gap-2 p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg border border-slate-700/50 hover:border-orange-500/50 transition group">
+                            <i class="fab fa-java text-orange-400 text-lg"></i>
+                            <div>
+                                <div class="text-white text-sm font-medium group-hover:text-orange-400 transition">SDK</div>
+                                <div class="text-slate-500 text-xs">Java • Maven</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Arun-Labana/logai-backend" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-2 p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg border border-slate-700/50 hover:border-green-500/50 transition group">
+                            <i class="fab fa-python text-green-400 text-lg"></i>
+                            <div>
+                                <div class="text-white text-sm font-medium group-hover:text-green-400 transition">Backend</div>
+                                <div class="text-slate-500 text-xs">Python • AI</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Arun-Labana/logai-frontend-app" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-2 p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg border border-slate-700/50 hover:border-blue-500/50 transition group">
+                            <i class="fab fa-react text-blue-400 text-lg"></i>
+                            <div>
+                                <div class="text-white text-sm font-medium group-hover:text-blue-400 transition">Frontend</div>
+                                <div class="text-slate-500 text-xs">React • TS</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Arun-Labana/sample-logai-app" target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-2 p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg border border-slate-700/50 hover:border-purple-500/50 transition group">
+                            <i class="fas fa-flask text-purple-400 text-lg"></i>
+                            <div>
+                                <div class="text-white text-sm font-medium group-hover:text-purple-400 transition">Sample</div>
+                                <div class="text-slate-500 text-xs">Demo App</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://logai-frontend-app.vercel.app" target="_blank" rel="noopener noreferrer"
+                           class="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 text-slate-950 font-bold rounded-lg btn-glow transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Arun-Labana/logai-sdk" target="_blank" rel="noopener noreferrer"
+                           class="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-emerald-500/50">
+                            <i class="fab fa-github"></i>
+                            View Source
+                        </a>
+                        <a href="https://jitpack.io/#Arun-Labana/logai-sdk" target="_blank" rel="noopener noreferrer"
+                           class="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-300 border border-slate-700 hover:border-orange-500/50">
+                            <i class="fas fa-cube"></i>
+                            JitPack
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="py-24">
+    <section id="skills" class="py-24 bg-slate-900/50">
         <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
             
             <div>
